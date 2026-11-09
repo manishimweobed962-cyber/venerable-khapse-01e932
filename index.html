@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="OBED ONLINE — amakuru, ubwenge, umuziki, imyidagaduro n'ubucuruzi.">
+<meta name="theme-color" content="#0b2d5c">
+<title>OBED ONLINE | Menya byinshi, buri munsi</title>
+<style>
+:root{--navy:#08264d;--blue:#1264c5;--sky:#eaf3ff;--ink:#14243a;--muted:#65758b;--white:#fff;--line:#dce6f2}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f6f9fd;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #001b3b30}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:1.35rem;font-weight:900;letter-spacing:.5px}.brand span{color:#72b5ff}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a{font-size:.92rem;color:#e8f2ff}nav a:hover{color:#8ec6ff}
+.menu{display:none;background:#174879;color:white;border:0;border-radius:8px;padding:9px 12px}
+.hero{background:linear-gradient(120deg,#08264d,#1264c5);color:white;padding:70px 0 62px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:30px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#9bcaff;font-size:.78rem;font-weight:bold}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;margin:12px 0 18px}
+.hero p{max-width:620px;color:#e0edff;font-size:1.08rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;font-weight:bold;background:white;color:var(--navy)}
+.btn.outline{background:transparent;border:1px solid #b9d9ff;color:white}
+.hero-card{background:#ffffff14;border:1px solid #ffffff30;border-radius:20px;padding:25px;backdrop-filter:blur(6px)}
+.hero-card .big{font-size:3.2rem}.hero-card h3{margin:4px 0}
+section{padding:48px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+h2{font-size:1.8rem;margin:0;color:var(--navy)}.sub{color:var(--muted);margin:5px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 5px 18px #092b5010}
+.icon{width:44px;height:44px;border-radius:12px;background:var(--sky);display:grid;place-items:center;font-size:1.4rem}
+.card h3{margin:12px 0 5px;color:var(--navy)}.card p{margin:0;color:var(--muted)}
+.tag{display:inline-block;color:var(--blue);font-size:.76rem;font-weight:bold;text-transform:uppercase;letter-spacing:.7px}
+.feature{background:var(--sky)}
+.article-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.article{background:white;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.art-top{height:105px;background:linear-gradient(135deg,#0b3b73,#5ba8f5);display:flex;align-items:center;justify-content:center;color:white;font-size:2.3rem}
+.article-body{padding:17px}.article-body h3{margin:7px 0;color:var(--navy)}.article-body p{color:var(--muted);font-size:.94rem}
+.small-link{color:var(--blue);font-weight:bold;font-size:.9rem}
+.notice{background:#fff8e8;border:1px solid #f0dba9;border-radius:12px;padding:15px;color:#6c5118;font-size:.9rem}
+.cta{background:var(--navy);color:white;border-radius:18px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cta h2{color:white}.cta p{color:#d5e7ff;margin-bottom:0}
+form{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}input{padding:12px;border:1px solid var(--line);border-radius:9px;min-width:0;flex:1}
+button.submit{padding:12px 16px;border:0;border-radius:9px;background:var(--blue);color:white;font-weight:bold;cursor:pointer}
+footer{background:#061d3a;color:#d7e7fb;padding:30px 0;margin-top:45px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.muted{color:#a9bfd9;font-size:.9rem}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.grid,.article-list{grid-template-columns:1fr 1fr}nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:18px 4%;flex-direction:column;align-items:flex-start}.menu{display:block}nav.open{display:flex}.cta{display:block}}
+@media(max-width:500px){.grid,.article-list{grid-template-columns:1fr}.hero{padding:48px 0}.section-head{display:block}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#home">OBED <span>ONLINE</span></a>
+  <button class="menu" id="menuBtn" aria-label="Fungura menu">☰</button>
+  <nav id="nav">
+   <a href="#home">Ahabanza</a><a href="#ibyiciro">Ibyiciro</a><a href="#amakuru">Amakuru</a><a href="#ubucuruzi">Ubucuruzi</a><a href="#twandikire">Twandikire</a>
+  </nav>
+ </div>
+</header>
+<main id="home">
+ <div class="hero">
+  <div class="wrap hero-grid">
+   <div><div class="eyebrow">Ikaze kuri OBED ONLINE</div>
+    <h1>Menya byinshi.<br>Iterambere ritangirira hano.</h1>
+    <p>Urubuga ruhuriza hamwe amakuru, ubwenge, umuziki, imyidagaduro n'ubucuruzi — ahantu hamwe, mu Kinyarwanda.</p>
+    <div class="actions"><a class="btn" href="#ibyiciro">Reba ibyiciro</a><a class="btn outline" href="#twandikire">Twandikire</a></div>
+   </div>
+   <div class="hero-card"><div class="big">🌐</div><h3>Isi y'ibitekerezo n'amahirwe</h3><p>Ibitekerezo bishya, amakuru afasha n'ibikorwa byagufasha gutera imbere.</p></div>
+  </div>
+ </div>
+
+ <section id="ibyiciro"><div class="wrap">
+  <div class="section-head"><div><h2>Ibyo uzasanga hano</h2><p class="sub">Ibyiciro by'ingenzi bya OBED ONLINE.</p></div></div>
+  <div class="grid">
+   <div class="card"><div class="icon">📰</div><h3>Amakuru n'ubuzima</h3><p>Inkuru, inama n'ibitekerezo bifasha mu buzima bwa buri munsi.</p></div>
+   <div class="card"><div class="icon">🎬</div><h3>Imyidagaduro</h3><p>Amakuru ya filime, ibyamamare n'ibikorwa by'imyidagaduro.</p></div>
+   <div class="card"><div class="icon">🎵</div><h3>Umuziki na lyrics</h3><p>Indirimbo nshya, ibiganiro ku muziki n'amagambo y'indirimbo ufitiye uburenganzira.</p></div>
+   <div class="card"><div class="icon">🧠</div><h3>Amagambo y'ubwenge</h3><p>Ubutumwa bugutera gutekereza no gukomeza intego zawe.</p></div>
+   <div class="card"><div class="icon">🛍️</div><h3>Ubucuruzi</h3><p>Ahantu ho kumenyekanisha no kugurisha ibicuruzwa na serivisi.</p></div>
+   <div class="card"><div class="icon">⭐</div><h3>Abanyamuryango</h3><p>Ibikoresho n'inyandiko byihariye bizashyirwaho nyuma yo kubitegura.</p></div>
+  </div>
+ </div></section>
+
+ <section class="feature" id="amakuru"><div class="wrap">
+  <div class="section-head"><div><h2>Ibiri ku rubuga</h2><p class="sub">Izi ni ingero zo kwerekana uko inyandiko zizagaragara.</p></div></div>
+  <div class="article-list">
+   <article class="article"><div class="art-top">💡</div><div class="article-body"><span class="tag">Ubwenge</span><h3>Intambwe nto na zo zigeza kure</h3><p>Gukomeza gukora buri munsi bishobora kubaka impinduka nini mu gihe.</p><a class="small-link" href="#twandikire">Soma byinshi →</a></div></article>
+   <article class="article"><div class="art-top">🎧</div><div class="article-body"><span class="tag">Umuziki</span><h3>Umuziki uhuza abantu</h3><p>Ahazajya hasohokera ibiganiro, inkuru n'amakuru y'abahanzi.</p><a class="small-link" href="#twandikire">Soma byinshi →</a></div></article>
+   <article class="article"><div class="art-top">🚀</div><div class="article-body"><span class="tag">Iterambere</span><h3>Igitekerezo gihinduka umushinga</h3><p>Wige gutegura igitekerezo no kugihindura igikorwa gifatika.</p><a class="small-link" href="#twandikire">Soma byinshi →</a></div></article>
+  </div>
+ </div></section>
+
+ <section id="ubucuruzi"><div class="wrap">
+  <div class="cta"><div><h2>Kwamamaza cyangwa kugurisha?</h2><p>Abacuruzi n'abatanga serivisi bashobora kutwandikira kugira ngo tubafashe kumenyekanisha ibikorwa byabo.</p></div><a class="btn" href="mailto:hello@obedonline.com?subject=Kwamamaza%20kuri%20OBED%20ONLINE">Twandikire</a></div>
+  <p class="notice" style="margin-top:18px"><strong>Icyitonderwa:</strong> Iyi ni verisiyo ya mbere. Kwishyura online, konti z'abanyamuryango n'amamaza byikora ntibirahuzwa. Bizakenera serivisi zemewe, igenzura n'amasezerano mbere yo kwakira amafaranga.</p>
+ </div></section>
+
+ <section id="twandikire"><div class="wrap">
+  <div class="section-head"><div><h2>Guma uhabwa amakuru</h2><p class="sub">Andika email yawe. Iyi demo ntirabika cyangwa ngo yohereze aderesi za email.</p></div></div>
+  <form id="signup"><input type="email" placeholder="Email yawe" aria-label="Email yawe" required><button class="submit" type="submit">Ohereza</button></form>
+  <p id="msg" class="muted" aria-live="polite"></p>
+ </div></section>
+</main>
+<footer><div class="wrap foot"><div><div class="brand">OBED <span>ONLINE</span></div><div class="muted">Menya byinshi, buri munsi.</div></div><div class="muted">© <span id="year"></span> OBED ONLINE. Uburenganzira bwose burarinzwe.</div></div></footer>
+<script>
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('signup').addEventListener('submit',e=>{e.preventDefault();document.getElementById('msg').textContent='Murakoze! Iyi demo ntirabasha kubika email. Hazongerwamo serivisi yo kohereza ubutumwa.';});
+</script>
+</body></html>
